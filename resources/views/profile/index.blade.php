@@ -153,7 +153,7 @@
         <div class="col-3">
             <div class="d-flex mb-2">
                 <div class="ml-auto p-2">
-                    <a href="{{url('/admin/artikel/add')}}" class="btn btn-primary btn-icon-split btn-sm">
+                    <a href="{{url('/admin/profile/addTeam')}}" class="btn btn-primary btn-icon-split btn-sm">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
@@ -179,10 +179,7 @@
                             <th>Nama</th>
                             <th>Jabatan</th>
                             <th>Photo</th>
-                            <th>Twitter</th>
-                            <th>Facebook</th>
-                            <th>Gmail</th>
-                            <th>Linkedin</th>
+                            <th>Social Media</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -192,33 +189,40 @@
                             <th>Nama</th>
                             <th>Jabatan</th>
                             <th>Photo</th>
-                            <th>Twitter</th>
-                            <th>Facebook</th>
-                            <th>Gmail</th>
-                            <th>Linkedin</th>
+                            <th>Social Media</th>
                             <th>Aksi</th>
                         </tr>
                     </tfoot>
                     <tbody>
                     @foreach($team as $row)
                         <tr>
-                            <td>{{$loop->iterations}}</td>
+                            <td>{{$loop->iteration}}</td>
                             <td>{{$row->nama}}</td>
                             <td>{{$row->jabatan}}</td>
-                            <td><img src="" alt="" class="img-fluid"></td>
-                            <td>{{$row->twitter}}</td>
-                            <td>{{$row->instagram}}</td>
-                            <td>{{$row->gmail}}</td>
-                            <td>{{$row->linkedin}}</td>
+                            <td><img src="{{asset('storage/'.$row->gambar)}}" alt="" class="img-thumbnail" style="width: 200px; height: 200px;"></td>
                             <td>
-                                <form action="{{url('/admin/artikel/delete/')}}" method="post">
+                                <a href="{{$row->twitter}}">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="{{$row->facebook}}">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="{{$row->gmail}}">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="{{$row->linkedin}}">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <form action="{{url('/admin/profile/delete/'.$row->id)}}" method="post">
                                 @method('delete')
                                 @csrf
                                     <button type="submit" class="btn btn-danger btn-circle btn-sm d-block" onclick="return confirm('Are you sure?')">
                                             <i class="fa fa-trash"></i>
                                     </button>
                                 </form>
-                                <a href="{{url('/admin/artikel/edit/')}}" class="btn btn-primary btn-circle btn-sm">
+                                <a href="{{url('/admin/profile/editTeam/'.$row->id)}}" class="btn btn-primary btn-circle btn-sm">
                                     <i class="fas fa-pen"></i>
                                 </a>
                                 

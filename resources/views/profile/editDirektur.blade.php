@@ -1,5 +1,5 @@
 @extends('template/adminView')
-@section('title','Admin Edit Artikel')
+@section('title','Admin Edit Direktur')
 @section('container')
 
 <!-- Begin Page Content -->
@@ -9,7 +9,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Edit Artikel</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Edit Direktur</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">

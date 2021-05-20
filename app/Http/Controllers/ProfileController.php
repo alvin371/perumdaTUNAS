@@ -35,7 +35,7 @@ class ProfileController extends Controller
     public function createTeam()
     {
         //tambah team, edit view Team
-        return view('artikel/addTeam');
+        return view('profile/tambahTeam');
     }
 
     /**
@@ -149,10 +149,10 @@ class ProfileController extends Controller
         $profile = profile::find($id);
 
         // Data Harus diganti
-        $profile->nama = $request->nama ? $request->nama : $profile->nama;
-        $profile->artikel = $request->artikel ? $request->artikel : $profile->artikel;
-        $profile->jabatan = $request->jabatan ? $request->jabatan : $profile->jabatan;
-        $profile->photo = $request->file('photo')->store('ProfilePhoto','public');
+        $profile->visi = $request->visi ? $request->visi : $profile->visi;
+        $profile->misi = $request->misi ? $request->misi : $profile->misi;
+        $profile->tugasPokok = $request->tugasPokok ? $request->tugasPokok : $profile->tugasPokok;
+        $profile->fungsi = $request->fungsi ? $request->fungsi : $profile->fungsi;
 
         $profile->save();
         return redirect('admin/profile')->with('status', 'profile berhasil di edit!');

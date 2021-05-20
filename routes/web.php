@@ -103,7 +103,7 @@ Route::patch('/admin/profile/direkturUpdate/{profile}', [ProfileController::clas
 // Team
 Route::get('/admin/profile/editTeam/{profile}', [ProfileController::class,'editTeam']);
 Route::patch('/admin/profile/teamUpdate/{profile}', [ProfileController::class,'teamUpdate']);
-Route::get('/admin/profile/addTeam', [ProfileController::class,'addTeam']);
+Route::get('/admin/profile/addTeam', [ProfileController::class,'createTeam']);
 Route::post('/admin/profile/storeTeam',[ProfileController::class,'storeTeam']);
 
 // Profile
