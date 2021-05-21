@@ -6,6 +6,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\UserController;
 
 
@@ -109,4 +110,13 @@ Route::post('/admin/profile/storeTeam',[ProfileController::class,'storeTeam']);
 // Profile
 Route::get('/admin/profile/editProfile/{profile}', [ProfileController::class,'editProfile']);
 Route::patch('/admin/profile/profileUpdate/{profile}', [ProfileController::class,'profileUpdate']);
+
+
+// Target Layanan, highlights about us, produk
+
+// Produk
+
+Route::get('/admin/produk',[ProdukController::class,'index']);
+
+
 });
