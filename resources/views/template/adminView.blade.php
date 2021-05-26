@@ -97,9 +97,9 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/admin/admin')}}">
+                <a class="nav-link" href="{{url('/admin/gallery')}}">
                     <i class="fas fa-user-cog fa-chart-area"></i>
-                    <span>Admin</span></a>
+                    <span>Gallery</span></a>
             </li>
 
             <!-- Nav Item - Tables -->

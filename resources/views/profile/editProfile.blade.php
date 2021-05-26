@@ -58,7 +58,8 @@
 @section('javascript')
 <script src="{{asset('cssAdmin/ckeditor/ckeditor.js')}}"></script>
 <script>
-    CKEDITOR.replace('artikel');
+    CKEDITOR.replace('tugasPokok');
+    CKEDITOR.replace('fungsi');
 
 </script>
 <script>    

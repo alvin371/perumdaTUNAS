@@ -5,10 +5,8 @@
 <main id="main">
         <!--==========================Produk============================-->
         <div class="row tm-welcome-section">
-            <h2 class="col-12 text-center tm-section-title">Welcome to Simple House</h2>
-            <p class="col-12 text-center">Total 3 HTML pages are included in this template. Header image has a parallax
-                effect. You can feel free to download, edit and use this TemplateMo layout for your commercial or
-                non-commercial websites.</p>
+            <h2 class="col-12 text-center tm-section-title">Selamat Datang di Website Perumda Tugu Aneka Usaha</h2>
+            <p class="col-12 text-center">Berikut adalah seluruh produk yang ada di Perumda Tugu Aneka Usaha, Tata Cara Pembelian, Pembayaran dan Pengiriman akan kami informasikan setelah anda menekan tombol Beli</p>
         </div>
         <!-- Gallery -->
         <div class="row tm-paging-links">
@@ -44,118 +42,21 @@
 
             <!-- gallery page 1 -->
             <div id="tm-gallery-page-pizza" class="tm-gallery-page">
+                @foreach($produk as $row)
                 <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                     <figure>
-                        <img src="img/gallery/01.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+                        <img src="{{asset('storage/'.$row->gambar)}}" alt="Image" class="img-fluid tm-gallery-img" />
                         <figcaption>
-                            <h4 class="tm-gallery-title">Fusce dictum finibus</h4>
-                            <p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit
-                                amet tellus accumsan</p>
-                            <p class="tm-gallery-price">$45 / $55</p>
+                            <h4 class="tm-gallery-title">{{$row->nama}}</h4>
+                            <p class="tm-gallery-description">{{$row->deskripsi}}</p>
+                            <p class="tm-gallery-price">{{$row->harga}}/ {{$row->satuan}}</p>
                             <div class="fh5co_tags_all">
-                                <a href="#" class="fh5co_tagg">Business</a>
+                                <a href="https://wa.me/+6282147040879" class="fh5co_tagg">Beli</a>
                             </div>
                         </figcaption>
                     </figure>
                 </article>
-                <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                    <figure>
-                        <img src="img/gallery/02.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-                        <figcaption>
-                            <h4 class="tm-gallery-title">Aliquam sagittis</h4>
-                            <p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit
-                                amet tellus accumsan</p>
-                            <p class="tm-gallery-price">$65 / $70</p>
-                            <div class="fh5co_tags_all">
-                                <a href="#" class="fh5co_tagg">Business</a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                    <figure>
-                        <img src="img/gallery/03.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-                        <figcaption>
-                            <h4 class="tm-gallery-title">Sed varius turpis</h4>
-                            <p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit
-                                amet tellus accumsan</p>
-                            <p class="tm-gallery-price">$30.50</p>
-                            <div class="fh5co_tags_all">
-                                <a href="#" class="fh5co_tagg">Business</a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                    <figure>
-                        <img src="img/gallery/04.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-                        <figcaption>
-                            <h4 class="tm-gallery-title">Aliquam sagittis</h4>
-                            <p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit
-                                amet tellus accumsan</p>
-                            <p class="tm-gallery-price">$25.50</p>
-                            <div class="fh5co_tags_all">
-                                <a href="#" class="fh5co_tagg">Business</a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                    <figure>
-                        <img src="img/gallery/05.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-                        <figcaption>
-                            <h4 class="tm-gallery-title">Maecenas eget justo</h4>
-                            <p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit
-                                amet tellus accumsan</p>
-                            <p class="tm-gallery-price">$80.25</p>
-                            <div class="fh5co_tags_all">
-                                <a href="#" class="fh5co_tagg">Business</a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                    <figure>
-                        <img src="img/gallery/06.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-                        <figcaption>
-                            <h4 class="tm-gallery-title">Quisque et felis eros</h4>
-                            <p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit
-                                amet tellus accumsan</p>
-                            <p class="tm-gallery-price">$20 / $40 / $60</p>
-                            <div class="fh5co_tags_all">
-                                <a href="#" class="fh5co_tagg">Business</a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                    <figure>
-                        <img src="img/gallery/07.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-                        <figcaption>
-                            <h4 class="tm-gallery-title">Sed ultricies dui</h4>
-                            <p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit
-                                amet tellus accumsan</p>
-                            <p class="tm-gallery-price">$94</p>
-                            <div class="fh5co_tags_all">
-                                <a href="#" class="fh5co_tagg">Business</a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-                    <figure>
-                        <img src="img/gallery/08.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-                        <figcaption>
-                            <h4 class="tm-gallery-title">Donec porta consequat</h4>
-                            <p class="tm-gallery-description">Nam in suscipit nisi, sit amet consectetur metus. Ut sit
-                                amet tellus accumsan</p>
-                            <p class="tm-gallery-price">$15</p>
-                            <div class="fh5co_tags_all">
-                                <a href="#" class="fh5co_tagg">Business</a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </article>
+                @endforeach
             </div>
             <!-- gallery page 1 -->
         </div>

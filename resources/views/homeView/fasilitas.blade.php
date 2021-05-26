@@ -19,7 +19,7 @@
                     <div class="well-left">
                         <div class="single-well">
                             <a href="#">
-                                <img src="img/1.jpg" alt="">
+                                <img src="{{asset('cssHome/img/1.jpg')}}" alt="">
                             </a>
                         </div>
                     </div>

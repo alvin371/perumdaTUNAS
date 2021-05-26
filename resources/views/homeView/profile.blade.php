@@ -4,7 +4,7 @@
 <!-- #header -->
 <main id="main">
     <!--==========================Pimpinan============================-->
-    <section id="pimpinan">
+    <section id="pimpinan" >
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-sm-6">
@@ -15,19 +15,14 @@
               </h2>
               <div class="wow fadeInUp" data-wow-delay="0.8s">
                 <p>
-                  Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae
-                  velit volutpat venenatis.
-                </p>
-                <p>
-                  Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat,
-                  diam a tempus vehicula.
+                  <?php echo $direktur->artikel ?>
                 </p>
               </div>
               <figure class="profile wow fadeInUp" data-wow-delay="1s">
-                <img src="{{asset('cssHome/img/author-image.jpg')}}" class="img-responsive" alt="">
+                <img src="{{asset('storage/'.$direktur->photo)}}" class="img-responsive" alt="">
                 <figcaption>
-                  <h3>Dr. Neil Jackson</h3>
-                  <p>General Principal</p>
+                  <h3>{{$direktur->nama}}</h3>
+                  <p>{{$direktur->jabatan}}</p>
                 </figcaption>
               </figure>
             </div>
@@ -62,7 +57,7 @@
                     </div>
                     <div class="col-md-6">
                       <h4>Visi</h4>
-                      <p>"Mewujudkan PD. RPH sebagai perusahaan yang sehat, penghasil pendapatan dan pendorong perekonomian daerah melalui sinergi UMKM".</p>
+                      <p><?php echo $profile->visi; ?></p>
                     </div>
                   </div>
                 </article>
@@ -74,11 +69,7 @@
                     <div class="col-md-6">
                       <h4>Misi</h4>
                       <p>
-                        1.Menumbuh Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        <br>2.Membudayakan Donec vitae lorem eget ipsum accumsan tempor at id est
-                        <br>3.Menumbuhkembangkan Pellentesque quis tortor eu tortor pretium cursus sed id justo
-                        <br>4.Menyediakan Pellentesque quis tortor eu tortor pretium cursus sed id justo
-                        <br>5.Menerapkan Donec sollicitudin lorem ut enim egestas, eu pellentesque ante egestas
+                        <?php $profile->misi; ?>
                       </p>
                     </div>
                   </div>
@@ -88,21 +79,13 @@
                     <div class="col-md-6">
                       <h4 style="text-align: center;">Tugas Pokok</h4>
                       <p>
-                        Menyediakan tempat, melaksanakan pemotongan hewan dan pengembangan budidaya hewan protong dalam
-                        rangka melayani kebutuhan masyarakat akan daging yang memenuhi syarat kesehatan dan agama serta
-                        peraturan perundang-undangan yang berlaku.
+                        <?php echo $profile->tugasPokok; ?>
                       </p>
                     </div>
                     <div class="col-md-6">
                       <h4 style="text-align: center;">Fungsi</h4>
                       <p>
-                        1.Pelaksanaan Pembinaan dan pengelolaan Perusahaan Daerah sesuai kebijakan Pemerintah Daerah;
-                        <br> 2.Pelaksanaan Koordinasi dengan instansi terkait yang meliputi segala usaha dan kegiatan
-                        guna mewujudkan peningkatan pelayanan kepada masyarakat di bidang pemotongan hewan dan budidaya
-                        hewan potong dalam rangka pelayanan kebutuhan daging sehat;
-                        <br> 3.Pengawasan dan pengamanan teknis atas segala usaha dan kegiatan tugas pokok sesuai dengan
-                        kebijakan Pemerintah Daerah;
-                        <br> 4.Pelaksanaan Urusan Tata Usaha Perusahaan Daerah.
+                        <?php echo $profile->fungsi; ?>
                       </p>
                     </div>
                   </div>
@@ -226,24 +209,25 @@
         </div>
         <br>
         <div class="row">
+        @foreach($team as $row)
           <div class="col-lg-3 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src="img/team-1.jpg" class="img-fluid" alt="">
+              <img src="{{asset('storage/'.$row->gambar)}}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
+                  <h4>{{$row->nama}}</h4>
+                  <span>{{$row->jabatan}}</span>
                   <div class="social">
-                    <a href="">
+                    <a href="{{$row->twitter}}">
                       <i class="fa fa-twitter"></i>
                     </a>
-                    <a href="">
+                    <a href="{{$row->facebook}}">
                       <i class="fa fa-facebook"></i>
                     </a>
-                    <a href="">
+                    <a href="{{$row->gmail}}">
                       <i class="fa fa-google-plus"></i>
                     </a>
-                    <a href="">
+                    <a href="{{$row->linkedin}}">
                       <i class="fa fa-linkedin"></i>
                     </a>
                   </div>
@@ -251,181 +235,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="member">
-              <img src="img/team-2.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                  <div class="social">
-                    <a href="">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="member">
-              <img src="img/team-3.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                  <div class="social">
-                    <a href="">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="member">
-              <img src="img/team-4.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                  <div class="social">
-                    <a href="">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp">
-            <div class="member">
-              <img src="img/team-1.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
-                  <div class="social">
-                    <a href="">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="member">
-              <img src="img/team-2.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                  <div class="social">
-                    <a href="">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="member">
-              <img src="img/team-3.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                  <div class="social">
-                    <a href="">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="member">
-              <img src="img/team-4.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                  <div class="social">
-                    <a href="">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        @endforeach
         </div>
       </div>
     </section>

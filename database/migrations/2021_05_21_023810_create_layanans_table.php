@@ -18,7 +18,6 @@ class CreateLayanansTable extends Migration
             $table->Text('gambar');
             $table->Text('caption');
             $table->Text('deskripsi');
-            $table->Text('isi');
             $table->timestamps();
         });
     }
